@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #19a2ae; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2;
+  position: relative;
+  width: auto;
+  text-align: center;
+  overflow: hidden; }
+
+.bg {
+  position: relative;
+  z-index: 1; }
+  .bg__circle--1 {
+    position: absolute;
+    top: -695px;
+    left: -985px; }
+  .bg__circle--2 {
+    position: absolute;
+    right: -990px;
+    bottom: -1120px; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2rem 4rem rgba(106, 111, 129, 0.3);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 36.5rem;
+  background-color: #fff;
+  z-index: 2; }
+  @media only screen and (max-width: 25em) {
+    .card {
+      width: 33rem; } }
+  @media only screen and (max-width: 21.875em) {
+    .card {
+      width: 28rem; } }
+
+.background {
+  height: calc((140rem * 100) / 365);
+  overflow: hidden; }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc((140rem * 100) / 365); }
+  .profile__pic {
+    border-radius: 50%;
+    transform: translateY(-50%);
+    border: 4px solid white; }
+  .profile__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 700;
+    margin-top: -4rem;
+    margin-bottom: 1.5rem; }
+    .profile__head-name {
+      font-size: 1.8rem;
+      margin-right: 0.8rem;
+      color: #2d3248; }
+    .profile__head-age {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #969696; }
+  .profile__area {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #969696; }
+
+.stats {
+  height: calc((80rem * 100) / 365);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid rgba(150, 150, 150, 0.4); }
+  .stats > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .stats > * > :first-child {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3248;
+    margin-bottom: 0.5rem; }
+  .stats > * > :last-child {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6a6f81;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px; }

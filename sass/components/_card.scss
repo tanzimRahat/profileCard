@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+    position: relative;
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bg {
+    position: relative;
+    z-index: 1;
+
+    &__circle {
+        &--1 {
+            position: absolute;
+            top: -695px;
+            left: -985px;
+        }
+
+        &--2 {
+            position: absolute;
+            right: -990px;
+            bottom: -1120px;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2rem 4rem rgba($color-primary-grayishblue, 0.3);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 36.5rem;
+    background-color: #fff;
+    z-index: 2;
+    // min-height: 36.5rem;
+
+    @media only screen and (max-width: 25em) {
+        width: 33rem;
+    }
+
+    @media only screen and (max-width: 21.875em) {
+        width: 28rem;
+    }
+}
+
+.background {
+    height: calc((140rem * 100) / 365);
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc((140rem * 100) / 365);
+
+    &__pic {
+        border-radius: 50%;
+        transform: translateY(-50%);
+        border: 4px solid white;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-weight: 700;
+        margin-top: -4rem;
+        margin-bottom: 1.5rem;
+
+        &-name {
+            font-size: 1.8rem;
+            margin-right: 0.8rem;
+            color: $color-primary-blue;
+        }
+        &-age {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: $color-neutral;
+        }
+    }
+
+    &__area {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: $color-neutral;
+    }
+}
+
+.stats {
+    height: calc((80rem * 100) / 365);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgba($color-neutral, 0.4);
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & > * > :first-child {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-primary-blue;
+        margin-bottom: 0.5rem;
+    }
+
+    & > * > :last-child {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-primary-grayishblue;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+}
